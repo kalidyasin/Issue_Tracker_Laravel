@@ -53,7 +53,15 @@ if(value){
                                   </th>
                                   <th className="px-10 py-2  "> 
                                     <SelectInput className="w-full"
-                                    onchange={e=> searchFieldchanged('status',e.target.value)}/>
+                                    onchange={e=> searchFieldChanged('status',e.target.value)
+
+                                    }
+                                    >
+                                      <option value="">Select status</option>
+                                      <option value="pending">Pending</option>
+                                      <option value="in_progress">In progress</option>
+                                      <option value="completed">Completed</option>
+                                    </SelectInput>
                                   </th>
                                   </tr>
                                     </thead>
