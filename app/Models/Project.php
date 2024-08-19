@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    use HasFactory;
+    use HasFactory; 
+    protected $fillable=['image_path', 'name','description','status','due_date','created_by','updated_by'];
     public function issues(){
 return $this-> hasMany(Issue::class);
     }
